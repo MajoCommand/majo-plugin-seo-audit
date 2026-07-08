@@ -1,0 +1,20 @@
+{
+  "name": "@majo/plugin-seo-audit",
+  "version": "0.1.0",
+  "description": "Majo plugin: scores each deployed project's live site on core on-page SEO.",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": { "@majo/plugin-sdk": "github:MajoCommand/majo-plugin-sdk" },
+  "devDependencies": { "typescript": "^5.6.0", "vitest": "^2.1.0" },
+  "repository": { "type": "git", "url": "git+https://github.com/MajoCommand/majo-plugin-seo-audit.git" }
+}
